@@ -11,44 +11,47 @@ struct HomeView: View {
     var heroTestImageTitle = Constants.ImageMovieURL
 
     var body: some View {
-        ScrollView{
-            VStack{
-                AsyncImage(url: URL(string : heroTestImageTitle)){
-                    image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                } placeholder:{
-                    ProgressView()
-                }
-                
-                HStack {
-                    Button {
+        GeometryReader{ geo in
+            ScrollView{
+                LazyVStack{
+                    AsyncImage(url: URL(string : heroTestImageTitle)){
+                        image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    } placeholder:{
+                        ProgressView()
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height * 0.85)
+                    
+                    HStack {
+                        Button {
+                            
+                        } label: {
+                            Text(Constants.playString)
+                                .ghostBtn()
+                        }
                         
-                    } label: {
-                        Text(Constants.playString)
-                            .ghostBtn()
+                        Button {
+                            
+                        } label: {
+                            Text(Constants.downloadString)
+                                .ghostBtn()
+                        }
                     }
                     
-                    Button {
-                        
-                    } label: {
-                        Text(Constants.downloadString)
-                            .ghostBtn()
-                    }
+                    //TOP TRENDING HORIZONTAL LIST
+                    //ANIME
+                    HorizontalListView(header: Constants.trendingAnimeString)
+                    HorizontalListView(header: Constants.topRatedAnimeString)
+                    //Movie
+                    HorizontalListView(header: Constants.topRatedAnimeString)
+                    HorizontalListView(header: Constants.topRatedAnimeString)
+                    //Series
+                    HorizontalListView(header: Constants.trendingSeriesString)
+                    HorizontalListView(header: Constants.topRatedSeriesString)
                 }
-                
-                //TOP TRENDING HORIZONTAL LIST
-                //ANIME
-                HorizontalListView(header: Constants.trendingAnimeString)
-                HorizontalListView(header: Constants.topRatedAnimeString)
-                //Movie
-                HorizontalListView(header: Constants.topRatedAnimeString)
-                HorizontalListView(header: Constants.topRatedAnimeString)
-                //Series
-                HorizontalListView(header: Constants.trendingSeriesString)
-                HorizontalListView(header: Constants.topRatedSeriesString)
             }
         }
     }
