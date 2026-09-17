@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Constants
 {
@@ -21,4 +22,18 @@ struct Constants
     static let downloadIconString = "arrow.down.to.line"
  
     static let ImageMovieURLString = "https://www.themoviedb.org/t/p/w600_and_h900_face/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg"
+}
+
+extension Text{
+    func ghostBtn() -> some View{
+        self
+            .frame(width: 100, height: 50)
+            .foregroundStyle(.btnText)
+            .bold()
+            .background(){
+                RoundedRectangle(cornerRadius: 20 , style: .continuous)
+                    .stroke(.btnBorder, lineWidth: 5)
+            }
+    }
+    
 }
