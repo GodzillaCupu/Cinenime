@@ -6,8 +6,13 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		27E6F037305B6C65006AB78A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 27E6F036305B6C59006AB78A /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		27E6F01C305B68AE006AB78A /* Cinenime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinenime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E6F036305B6C59006AB78A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +35,7 @@
 		27E6F013305B68AE006AB78A = {
 			isa = PBXGroup;
 			children = (
+				27E6F036305B6C59006AB78A /* .gitignore */,
 				27E6F01E305B68AE006AB78A /* Cinenime */,
 				27E6F01D305B68AE006AB78A /* Products */,
 			);
@@ -102,6 +108,7 @@
 		27E6F01A305B68AE006AB78A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				27E6F037305B6C65006AB78A /* .gitignore in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
