@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Constants
+{
+    static let homeString = "Home"
+    static let upcomingString = "Up Coming"
+    static let searchString = "Search"
+    static let downloadString = "downloadString"
+}
