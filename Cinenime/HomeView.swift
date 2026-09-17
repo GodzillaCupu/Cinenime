@@ -11,31 +11,44 @@ struct HomeView: View {
     var heroTestImageTitle = Constants.ImageMovieURL
 
     var body: some View {
-        VStack
-        {
-            AsyncImage(url: URL(string : heroTestImageTitle)){image in
-                image
-                    .resizable()
-                    .scaledToFit()
-            }
-            placeholder:{
-                ProgressView()
-            }
-            
-            HStack {
-                Button {
-                    
-                } label: {
-                    Text(Constants.playString)
-                        .ghostBtn()
+        ScrollView{
+            VStack{
+                AsyncImage(url: URL(string : heroTestImageTitle)){
+                    image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                } placeholder:{
+                    ProgressView()
                 }
                 
-                Button {
+                HStack {
+                    Button {
+                        
+                    } label: {
+                        Text(Constants.playString)
+                            .ghostBtn()
+                    }
                     
-                } label: {
-                    Text(Constants.downloadString)
-                        .ghostBtn()
+                    Button {
+                        
+                    } label: {
+                        Text(Constants.downloadString)
+                            .ghostBtn()
+                    }
                 }
+                
+                //TOP TRENDING HORIZONTAL LIST
+                //ANIME
+                HorizontalListView(header: Constants.trendingAnimeString)
+                HorizontalListView(header: Constants.topRatedAnimeString)
+                //Movie
+                HorizontalListView(header: Constants.topRatedAnimeString)
+                HorizontalListView(header: Constants.topRatedAnimeString)
+                //Series
+                HorizontalListView(header: Constants.trendingSeriesString)
+                HorizontalListView(header: Constants.topRatedSeriesString)
             }
         }
     }
