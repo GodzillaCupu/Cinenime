@@ -12,7 +12,7 @@ struct ContentView: View {
         TabView{
             Tab(Constants.homeString,systemImage:Constants.homeIconString)
             {
-                Text("Page Home")
+                HomeView()
             }
             Tab(Constants.upcomingString,systemImage:Constants.upcomingIconString)
             {
