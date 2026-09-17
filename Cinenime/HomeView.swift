@@ -8,8 +8,42 @@
 import SwiftUI
 
 struct HomeView: View {
+    var heroTestImageTitle = Constants.ImageMovieURLString
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack
+        {
+            AsyncImage(url: URL(string : heroTestImageTitle)){image in
+                image
+                    .resizable()
+                    .scaledToFit()
+            }
+            placeholder:{
+                ProgressView()
+            }
+            
+            HStack {
+                Button {
+                    
+                } label: {
+                    Text(Constants.playString)
+                        .frame(width: 100, height: 50)
+                        .foregroundStyle(.btnText)
+                        .bold()
+                        .background(){
+                            RoundedRectangle(cornerRadius: 20 , style: .continuous)
+                                .stroke(.btnBorder, lineWidth: 5)
+                            
+                        }
+                }
+                
+                Button {
+                    
+                } label: {
+                    Text(Constants.downloadString)
+                }
+            }
+        }
     }
 }
 
