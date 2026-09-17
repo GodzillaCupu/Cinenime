@@ -21,7 +21,15 @@ struct Constants
     static let searchIconString = "magnifyingglass"
     static let downloadIconString = "arrow.down.to.line"
  
-    static let ImageMovieURLString = "https://www.themoviedb.org/t/p/w600_and_h900_face/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg"
+    //Used At Home View
+    static let ImageMovieURL = "https://www.themoviedb.org/t/p/w600_and_h900_face/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg"
+    
+    //Used At Trending View
+    static let ImageMovieURL2 = "https://www.themoviedb.org/t/p/w600_and_h900_face/m5fRPYLziGuqHBJt2LalEmg8sgc.jpg"
+    static let ImageMovieURL3 = "https://www.themoviedb.org/t/p/w600_and_h900_face/bAQ8O5Uw6FedtlCbJTutenzPVKd.jpg"
+    static let ImageMovieURL4 = "https://www.themoviedb.org/t/p/w600_and_h900_face/v0s3dx6am0RzfsuK3KdEy8ZoCDs.jpg"
+    static let ImageMovieURL5 = "https://www.themoviedb.org/t/p/w600_and_h900_face/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg"
+    static let ImageMovieURL6 = "https://www.themoviedb.org/t/p/w600_and_h900_face/fWVSwgjpT2D78VUh6X8UBd2rorW.jpg"
 }
 
 extension Text{

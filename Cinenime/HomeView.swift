@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    var heroTestImageTitle = Constants.ImageMovieURLString
+    var heroTestImageTitle = Constants.ImageMovieURL
 
     var body: some View {
         VStack
