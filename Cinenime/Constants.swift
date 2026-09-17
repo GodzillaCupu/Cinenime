@@ -20,6 +20,13 @@ struct Constants
     static let upcomingIconString = "play.circle"
     static let searchIconString = "magnifyingglass"
     static let downloadIconString = "arrow.down.to.line"
+    
+    static let trendingAnimeString = "Trending Animes"
+    static let trendingMovieString = "Trending Movies"
+    static let trendingSeriesString = "Trending Series"
+    static let topRatedAnimeString = "Top Rated Anime"
+    static let topRatedMovieString = "Top Rated Movies"
+    static let topRatedSeriesString = "Top Rated Series"
  
     //Used At Home View
     static let ImageMovieURL = "https://www.themoviedb.org/t/p/w600_and_h900_face/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg"

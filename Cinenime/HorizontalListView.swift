@@ -40,5 +40,5 @@ struct HorizontalListView: View {
 }
 
 #Preview {
-    HorizontalListView(header: Constants.trendingString)
+    HorizontalListView(header: Constants.trendingAnimeString)
 }
