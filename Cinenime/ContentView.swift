@@ -16,15 +16,15 @@ struct ContentView: View {
             }
             Tab(Constants.upcomingString,systemImage:Constants.upcomingIconString)
             {
-                Text("Page Up Comming")
+                Text(Constants.upcomingString)
             }
             Tab(Constants.searchString,systemImage:Constants.searchIconString)
             {
-                Text("Page Search")
+                Text(Constants.searchString)
             }
             Tab(Constants.downloadString,systemImage:Constants.downloadIconString)
             {
-                Text("Page Download")
+                Text(Constants.downloadString)
             }
         }
     }
