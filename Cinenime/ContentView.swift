@@ -27,8 +27,10 @@ struct ContentView: View {
                 Text(Constants.downloadString)
             }
         }.onAppear{
-            print(APIConfig.shared.tmdbBaseUrl)
-            print(APIConfig.shared.tmdbAPIKey)
+            if let config = APIConfig.shared{
+                print (config.tmdbAPIKey)
+                print (config.tmdbBaseUrl)
+            }
         }
     }
 }
