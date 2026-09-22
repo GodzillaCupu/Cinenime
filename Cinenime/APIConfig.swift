@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIConfig: Decodable{
-    let tmdbBaseURL: String
+    let tmdbBaseUrl: String
     let tmdbAPIKey: String
     
     //Singleton Desain Pattern - Start
