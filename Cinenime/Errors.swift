@@ -24,3 +24,20 @@ enum APIConfigError: Error,LocalizedError{
         } 
     }
 }
+
+enum NetworkError : Error, LocalizedError{
+    case badURLResponse(underlyingError : Error)
+    case missingConfig
+    case urlBuildFailed
+    
+    var errorDescription: String?{
+        switch self {
+        case .badURLResponse(underlyingError: let Error):
+            return "Failed to parse URL Response: \(Error.localizedDescription)."
+        case .missingConfig:
+            return "Missing API Configuration."
+        case .urlBuildFailed:
+            return "URL Build Failed"
+        }
+    }
+}
