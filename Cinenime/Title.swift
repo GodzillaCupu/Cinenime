@@ -16,5 +16,7 @@ struct Title: Decodable, Identifiable{
     var title: String?
     var name: String?
     var overview: String?
-    var posterPat: String?
+    var posterPath: String?
+    
+    
 }

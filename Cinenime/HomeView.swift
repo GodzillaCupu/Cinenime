@@ -54,8 +54,8 @@ struct HomeView: View {
                     HorizontalListView(header: Constants.trendingAnimeString)
                     HorizontalListView(header: Constants.topRatedAnimeString)
                     //Movie
-                    HorizontalListView(header: Constants.topRatedAnimeString)
-                    HorizontalListView(header: Constants.topRatedAnimeString)
+                    HorizontalListView(header: Constants.trendingMovieString)
+                    HorizontalListView(header: Constants.topRatedMovieString)
                     //Series
                     HorizontalListView(header: Constants.trendingSeriesString)
                     HorizontalListView(header: Constants.topRatedSeriesString)

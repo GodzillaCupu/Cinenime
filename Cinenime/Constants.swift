@@ -28,6 +28,16 @@ struct Constants
     static let topRatedMovieString = "Top Rated Movies"
     static let topRatedSeriesString = "Top Rated Series"
  
+    static let posterURLStart = "https://www.themoviedb.org/t/p/w600_and_h900_face"
+    static func addPosterPath(to titles: inout[Title]){
+        for index in titles.indices {
+            if let path = titles[index].posterPath {
+                titles[index].posterPath = Constants.posterURLStart + path
+            }
+        }
+    }
+    
+    
     //Used At Home View
     static let ImageMovieURL = "https://www.themoviedb.org/t/p/w600_and_h900_face/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg"
     
